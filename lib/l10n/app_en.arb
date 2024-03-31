@@ -1,4 +1,8 @@
 {
     "home_tabCompanies": "Companies",
-    "home_tabFavorites": "Favorites"
+    "home_tabFavorites": "Favorites",
+    "companies_searchTerm": "Enter the company symbol, e.g \"AAU\"",
+    "companies_error": "Something went wrong",
+    "companies_initialText": "Please enter the company symbol to begin search, e.g \"AAU\" ",
+    "companies_noResults": "No Results"
   }
