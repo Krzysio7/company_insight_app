@@ -9,10 +9,10 @@ part 'company_dto.g.dart';
 class CompanyDto with _$CompanyDto {
   const factory CompanyDto({
     required String symbol,
-    required String name,
-    required String currency,
-    required String stockExchange,
-    required String exchangeShortName,
+    String? name,
+    String? stockExchange,
+    String? exchangeShortName,
+    String? currency,
   }) = _CompanyDto;
 
   factory CompanyDto.fromJson(JSON json) => _$CompanyDtoFromJson(json);

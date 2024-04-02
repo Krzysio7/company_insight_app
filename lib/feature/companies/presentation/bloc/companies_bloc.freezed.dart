@@ -18,28 +18,32 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$CompaniesEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() init,
     required TResult Function(String text) textChanged,
-    required TResult Function(String name) addToFavorite,
-    required TResult Function(String name) removeFromFavorite,
+    required TResult Function(String symbol) addToFavorite,
+    required TResult Function(String symbol) removeFromFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
     TResult? Function(String text)? textChanged,
-    TResult? Function(String name)? addToFavorite,
-    TResult? Function(String name)? removeFromFavorite,
+    TResult? Function(String symbol)? addToFavorite,
+    TResult? Function(String symbol)? removeFromFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
     TResult Function(String text)? textChanged,
-    TResult Function(String name)? addToFavorite,
-    TResult Function(String name)? removeFromFavorite,
+    TResult Function(String symbol)? addToFavorite,
+    TResult Function(String symbol)? removeFromFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initialize value) init,
     required TResult Function(TextChanged value) textChanged,
     required TResult Function(AddToFavorite value) addToFavorite,
     required TResult Function(RemoveFromFavorite value) removeFromFavorite,
@@ -47,6 +51,7 @@ mixin _$CompaniesEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initialize value)? init,
     TResult? Function(TextChanged value)? textChanged,
     TResult? Function(AddToFavorite value)? addToFavorite,
     TResult? Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -54,6 +59,7 @@ mixin _$CompaniesEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialize value)? init,
     TResult Function(TextChanged value)? textChanged,
     TResult Function(AddToFavorite value)? addToFavorite,
     TResult Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -78,6 +84,120 @@ class _$CompaniesEventCopyWithImpl<$Res, $Val extends CompaniesEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$InitializeImplCopyWith<$Res> {
+  factory _$$InitializeImplCopyWith(
+          _$InitializeImpl value, $Res Function(_$InitializeImpl) then) =
+      __$$InitializeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InitializeImplCopyWithImpl<$Res>
+    extends _$CompaniesEventCopyWithImpl<$Res, _$InitializeImpl>
+    implements _$$InitializeImplCopyWith<$Res> {
+  __$$InitializeImplCopyWithImpl(
+      _$InitializeImpl _value, $Res Function(_$InitializeImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InitializeImpl implements Initialize {
+  const _$InitializeImpl();
+
+  @override
+  String toString() {
+    return 'CompaniesEvent.init()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitializeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() init,
+    required TResult Function(String text) textChanged,
+    required TResult Function(String symbol) addToFavorite,
+    required TResult Function(String symbol) removeFromFavorite,
+  }) {
+    return init();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
+    TResult? Function(String text)? textChanged,
+    TResult? Function(String symbol)? addToFavorite,
+    TResult? Function(String symbol)? removeFromFavorite,
+  }) {
+    return init?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
+    TResult Function(String text)? textChanged,
+    TResult Function(String symbol)? addToFavorite,
+    TResult Function(String symbol)? removeFromFavorite,
+    required TResult orElse(),
+  }) {
+    if (init != null) {
+      return init();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initialize value) init,
+    required TResult Function(TextChanged value) textChanged,
+    required TResult Function(AddToFavorite value) addToFavorite,
+    required TResult Function(RemoveFromFavorite value) removeFromFavorite,
+  }) {
+    return init(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initialize value)? init,
+    TResult? Function(TextChanged value)? textChanged,
+    TResult? Function(AddToFavorite value)? addToFavorite,
+    TResult? Function(RemoveFromFavorite value)? removeFromFavorite,
+  }) {
+    return init?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialize value)? init,
+    TResult Function(TextChanged value)? textChanged,
+    TResult Function(AddToFavorite value)? addToFavorite,
+    TResult Function(RemoveFromFavorite value)? removeFromFavorite,
+    required TResult orElse(),
+  }) {
+    if (init != null) {
+      return init(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Initialize implements CompaniesEvent {
+  const factory Initialize() = _$InitializeImpl;
 }
 
 /// @nodoc
@@ -144,9 +264,10 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() init,
     required TResult Function(String text) textChanged,
-    required TResult Function(String name) addToFavorite,
-    required TResult Function(String name) removeFromFavorite,
+    required TResult Function(String symbol) addToFavorite,
+    required TResult Function(String symbol) removeFromFavorite,
   }) {
     return textChanged(text);
   }
@@ -154,9 +275,10 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
     TResult? Function(String text)? textChanged,
-    TResult? Function(String name)? addToFavorite,
-    TResult? Function(String name)? removeFromFavorite,
+    TResult? Function(String symbol)? addToFavorite,
+    TResult? Function(String symbol)? removeFromFavorite,
   }) {
     return textChanged?.call(text);
   }
@@ -164,9 +286,10 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
     TResult Function(String text)? textChanged,
-    TResult Function(String name)? addToFavorite,
-    TResult Function(String name)? removeFromFavorite,
+    TResult Function(String symbol)? addToFavorite,
+    TResult Function(String symbol)? removeFromFavorite,
     required TResult orElse(),
   }) {
     if (textChanged != null) {
@@ -178,6 +301,7 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initialize value) init,
     required TResult Function(TextChanged value) textChanged,
     required TResult Function(AddToFavorite value) addToFavorite,
     required TResult Function(RemoveFromFavorite value) removeFromFavorite,
@@ -188,6 +312,7 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initialize value)? init,
     TResult? Function(TextChanged value)? textChanged,
     TResult? Function(AddToFavorite value)? addToFavorite,
     TResult? Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -198,6 +323,7 @@ class _$TextChangedImpl implements TextChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialize value)? init,
     TResult Function(TextChanged value)? textChanged,
     TResult Function(AddToFavorite value)? addToFavorite,
     TResult Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -225,7 +351,7 @@ abstract class _$$AddToFavoriteImplCopyWith<$Res> {
           _$AddToFavoriteImpl value, $Res Function(_$AddToFavoriteImpl) then) =
       __$$AddToFavoriteImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String name});
+  $Res call({String symbol});
 }
 
 /// @nodoc
@@ -239,12 +365,12 @@ class __$$AddToFavoriteImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? symbol = null,
   }) {
     return _then(_$AddToFavoriteImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -253,14 +379,14 @@ class __$$AddToFavoriteImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AddToFavoriteImpl implements AddToFavorite {
-  const _$AddToFavoriteImpl({required this.name});
+  const _$AddToFavoriteImpl({required this.symbol});
 
   @override
-  final String name;
+  final String symbol;
 
   @override
   String toString() {
-    return 'CompaniesEvent.addToFavorite(name: $name)';
+    return 'CompaniesEvent.addToFavorite(symbol: $symbol)';
   }
 
   @override
@@ -268,11 +394,11 @@ class _$AddToFavoriteImpl implements AddToFavorite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddToFavoriteImpl &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.symbol, symbol) || other.symbol == symbol));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name);
+  int get hashCode => Object.hash(runtimeType, symbol);
 
   @JsonKey(ignore: true)
   @override
@@ -283,33 +409,36 @@ class _$AddToFavoriteImpl implements AddToFavorite {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() init,
     required TResult Function(String text) textChanged,
-    required TResult Function(String name) addToFavorite,
-    required TResult Function(String name) removeFromFavorite,
+    required TResult Function(String symbol) addToFavorite,
+    required TResult Function(String symbol) removeFromFavorite,
   }) {
-    return addToFavorite(name);
+    return addToFavorite(symbol);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
     TResult? Function(String text)? textChanged,
-    TResult? Function(String name)? addToFavorite,
-    TResult? Function(String name)? removeFromFavorite,
+    TResult? Function(String symbol)? addToFavorite,
+    TResult? Function(String symbol)? removeFromFavorite,
   }) {
-    return addToFavorite?.call(name);
+    return addToFavorite?.call(symbol);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
     TResult Function(String text)? textChanged,
-    TResult Function(String name)? addToFavorite,
-    TResult Function(String name)? removeFromFavorite,
+    TResult Function(String symbol)? addToFavorite,
+    TResult Function(String symbol)? removeFromFavorite,
     required TResult orElse(),
   }) {
     if (addToFavorite != null) {
-      return addToFavorite(name);
+      return addToFavorite(symbol);
     }
     return orElse();
   }
@@ -317,6 +446,7 @@ class _$AddToFavoriteImpl implements AddToFavorite {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initialize value) init,
     required TResult Function(TextChanged value) textChanged,
     required TResult Function(AddToFavorite value) addToFavorite,
     required TResult Function(RemoveFromFavorite value) removeFromFavorite,
@@ -327,6 +457,7 @@ class _$AddToFavoriteImpl implements AddToFavorite {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initialize value)? init,
     TResult? Function(TextChanged value)? textChanged,
     TResult? Function(AddToFavorite value)? addToFavorite,
     TResult? Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -337,6 +468,7 @@ class _$AddToFavoriteImpl implements AddToFavorite {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialize value)? init,
     TResult Function(TextChanged value)? textChanged,
     TResult Function(AddToFavorite value)? addToFavorite,
     TResult Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -350,10 +482,10 @@ class _$AddToFavoriteImpl implements AddToFavorite {
 }
 
 abstract class AddToFavorite implements CompaniesEvent {
-  const factory AddToFavorite({required final String name}) =
+  const factory AddToFavorite({required final String symbol}) =
       _$AddToFavoriteImpl;
 
-  String get name;
+  String get symbol;
   @JsonKey(ignore: true)
   _$$AddToFavoriteImplCopyWith<_$AddToFavoriteImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -365,7 +497,7 @@ abstract class _$$RemoveFromFavoriteImplCopyWith<$Res> {
           $Res Function(_$RemoveFromFavoriteImpl) then) =
       __$$RemoveFromFavoriteImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String name});
+  $Res call({String symbol});
 }
 
 /// @nodoc
@@ -379,12 +511,12 @@ class __$$RemoveFromFavoriteImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = null,
+    Object? symbol = null,
   }) {
     return _then(_$RemoveFromFavoriteImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -393,14 +525,14 @@ class __$$RemoveFromFavoriteImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
-  const _$RemoveFromFavoriteImpl({required this.name});
+  const _$RemoveFromFavoriteImpl({required this.symbol});
 
   @override
-  final String name;
+  final String symbol;
 
   @override
   String toString() {
-    return 'CompaniesEvent.removeFromFavorite(name: $name)';
+    return 'CompaniesEvent.removeFromFavorite(symbol: $symbol)';
   }
 
   @override
@@ -408,11 +540,11 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RemoveFromFavoriteImpl &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.symbol, symbol) || other.symbol == symbol));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name);
+  int get hashCode => Object.hash(runtimeType, symbol);
 
   @JsonKey(ignore: true)
   @override
@@ -424,33 +556,36 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() init,
     required TResult Function(String text) textChanged,
-    required TResult Function(String name) addToFavorite,
-    required TResult Function(String name) removeFromFavorite,
+    required TResult Function(String symbol) addToFavorite,
+    required TResult Function(String symbol) removeFromFavorite,
   }) {
-    return removeFromFavorite(name);
+    return removeFromFavorite(symbol);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? init,
     TResult? Function(String text)? textChanged,
-    TResult? Function(String name)? addToFavorite,
-    TResult? Function(String name)? removeFromFavorite,
+    TResult? Function(String symbol)? addToFavorite,
+    TResult? Function(String symbol)? removeFromFavorite,
   }) {
-    return removeFromFavorite?.call(name);
+    return removeFromFavorite?.call(symbol);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? init,
     TResult Function(String text)? textChanged,
-    TResult Function(String name)? addToFavorite,
-    TResult Function(String name)? removeFromFavorite,
+    TResult Function(String symbol)? addToFavorite,
+    TResult Function(String symbol)? removeFromFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavorite != null) {
-      return removeFromFavorite(name);
+      return removeFromFavorite(symbol);
     }
     return orElse();
   }
@@ -458,6 +593,7 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(Initialize value) init,
     required TResult Function(TextChanged value) textChanged,
     required TResult Function(AddToFavorite value) addToFavorite,
     required TResult Function(RemoveFromFavorite value) removeFromFavorite,
@@ -468,6 +604,7 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initialize value)? init,
     TResult? Function(TextChanged value)? textChanged,
     TResult? Function(AddToFavorite value)? addToFavorite,
     TResult? Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -478,6 +615,7 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initialize value)? init,
     TResult Function(TextChanged value)? textChanged,
     TResult Function(AddToFavorite value)? addToFavorite,
     TResult Function(RemoveFromFavorite value)? removeFromFavorite,
@@ -491,10 +629,10 @@ class _$RemoveFromFavoriteImpl implements RemoveFromFavorite {
 }
 
 abstract class RemoveFromFavorite implements CompaniesEvent {
-  const factory RemoveFromFavorite({required final String name}) =
+  const factory RemoveFromFavorite({required final String symbol}) =
       _$RemoveFromFavoriteImpl;
 
-  String get name;
+  String get symbol;
   @JsonKey(ignore: true)
   _$$RemoveFromFavoriteImplCopyWith<_$RemoveFromFavoriteImpl> get copyWith =>
       throw _privateConstructorUsedError;

@@ -9,11 +9,11 @@ part 'company.g.dart';
 class Company with _$Company {
   const factory Company({
     required String symbol,
-    required String name,
-    required String currency,
-    required String stockExchange,
-    required String exchangeShortName,
     @Default(false) bool isFavorite,
+    String? name,
+    String? stockExchange,
+    String? exchangeShortName,
+    String? currency,
   }) = _Company;
 
   factory Company.fromJson(JSON json) => _$CompanyFromJson(json);

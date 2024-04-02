@@ -1,8 +1,12 @@
 {
-    "home_tabCompanies": "Companies",
-    "home_tabFavorites": "Favorites",
-    "companies_searchTerm": "Enter the company symbol, e.g \"AAU\"",
-    "companies_error": "Something went wrong",
-    "companies_initialText": "Please enter the company symbol to begin search, e.g \"AAU\" ",
-    "companies_noResults": "No Results"
-  }
+  "home_tabCompanies": "Companies",
+  "home_tabFavorites": "Favorites",
+  "companies_searchTerm": "Enter the company symbol, e.g \"AAU\"",
+  "companies_error": "Something went wrong",
+  "companies_initialText": "Please enter the company symbol to begin search, e.g \"AAU\" ",
+  "companies_noResults": "No Results",
+  "companies_noName": "Unknown name",
+  "companies_retry": "Retry",
+  "favorites_error": "Something went wrong",
+  "favorites_emptyList": "Here, a list of your companies of interest will appear."
+}

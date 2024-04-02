@@ -1,6 +1,6 @@
-import 'package:company_insight_app/core/design_system/companies_list/companies_list_view_model.dart';
-import 'package:company_insight_app/core/design_system/companies_list/company.dart';
-import 'package:company_insight_app/core/design_system/favorite_button.dart';
+import 'package:company_insight_app/core/design_system/widgets/companies_list/companies_list_view_model.dart';
+import 'package:company_insight_app/core/design_system/widgets/companies_list/company.dart';
+import 'package:company_insight_app/core/design_system/widgets/favorite_button.dart';
 import 'package:flutter/material.dart';
 
 class CompaniesList extends StatelessWidget {

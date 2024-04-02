@@ -21,11 +21,11 @@ Company _$CompanyFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Company {
   String get symbol => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get currency => throw _privateConstructorUsedError;
-  String get stockExchange => throw _privateConstructorUsedError;
-  String get exchangeShortName => throw _privateConstructorUsedError;
   bool get isFavorite => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get stockExchange => throw _privateConstructorUsedError;
+  String? get exchangeShortName => throw _privateConstructorUsedError;
+  String? get currency => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,11 +39,11 @@ abstract class $CompanyCopyWith<$Res> {
   @useResult
   $Res call(
       {String symbol,
-      String name,
-      String currency,
-      String stockExchange,
-      String exchangeShortName,
-      bool isFavorite});
+      bool isFavorite,
+      String? name,
+      String? stockExchange,
+      String? exchangeShortName,
+      String? currency});
 }
 
 /// @nodoc
@@ -60,37 +60,37 @@ class _$CompanyCopyWithImpl<$Res, $Val extends Company>
   @override
   $Res call({
     Object? symbol = null,
-    Object? name = null,
-    Object? currency = null,
-    Object? stockExchange = null,
-    Object? exchangeShortName = null,
     Object? isFavorite = null,
+    Object? name = freezed,
+    Object? stockExchange = freezed,
+    Object? exchangeShortName = freezed,
+    Object? currency = freezed,
   }) {
     return _then(_value.copyWith(
       symbol: null == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      currency: null == currency
-          ? _value.currency
-          : currency // ignore: cast_nullable_to_non_nullable
-              as String,
-      stockExchange: null == stockExchange
-          ? _value.stockExchange
-          : stockExchange // ignore: cast_nullable_to_non_nullable
-              as String,
-      exchangeShortName: null == exchangeShortName
-          ? _value.exchangeShortName
-          : exchangeShortName // ignore: cast_nullable_to_non_nullable
-              as String,
       isFavorite: null == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      stockExchange: freezed == stockExchange
+          ? _value.stockExchange
+          : stockExchange // ignore: cast_nullable_to_non_nullable
+              as String?,
+      exchangeShortName: freezed == exchangeShortName
+          ? _value.exchangeShortName
+          : exchangeShortName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currency: freezed == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -104,11 +104,11 @@ abstract class _$$CompanyImplCopyWith<$Res> implements $CompanyCopyWith<$Res> {
   @useResult
   $Res call(
       {String symbol,
-      String name,
-      String currency,
-      String stockExchange,
-      String exchangeShortName,
-      bool isFavorite});
+      bool isFavorite,
+      String? name,
+      String? stockExchange,
+      String? exchangeShortName,
+      String? currency});
 }
 
 /// @nodoc
@@ -123,37 +123,37 @@ class __$$CompanyImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? symbol = null,
-    Object? name = null,
-    Object? currency = null,
-    Object? stockExchange = null,
-    Object? exchangeShortName = null,
     Object? isFavorite = null,
+    Object? name = freezed,
+    Object? stockExchange = freezed,
+    Object? exchangeShortName = freezed,
+    Object? currency = freezed,
   }) {
     return _then(_$CompanyImpl(
       symbol: null == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      currency: null == currency
-          ? _value.currency
-          : currency // ignore: cast_nullable_to_non_nullable
-              as String,
-      stockExchange: null == stockExchange
-          ? _value.stockExchange
-          : stockExchange // ignore: cast_nullable_to_non_nullable
-              as String,
-      exchangeShortName: null == exchangeShortName
-          ? _value.exchangeShortName
-          : exchangeShortName // ignore: cast_nullable_to_non_nullable
-              as String,
       isFavorite: null == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      stockExchange: freezed == stockExchange
+          ? _value.stockExchange
+          : stockExchange // ignore: cast_nullable_to_non_nullable
+              as String?,
+      exchangeShortName: freezed == exchangeShortName
+          ? _value.exchangeShortName
+          : exchangeShortName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      currency: freezed == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -163,11 +163,11 @@ class __$$CompanyImplCopyWithImpl<$Res>
 class _$CompanyImpl extends _Company {
   const _$CompanyImpl(
       {required this.symbol,
-      required this.name,
-      required this.currency,
-      required this.stockExchange,
-      required this.exchangeShortName,
-      this.isFavorite = false})
+      this.isFavorite = false,
+      this.name,
+      this.stockExchange,
+      this.exchangeShortName,
+      this.currency})
       : super._();
 
   factory _$CompanyImpl.fromJson(Map<String, dynamic> json) =>
@@ -176,20 +176,20 @@ class _$CompanyImpl extends _Company {
   @override
   final String symbol;
   @override
-  final String name;
-  @override
-  final String currency;
-  @override
-  final String stockExchange;
-  @override
-  final String exchangeShortName;
-  @override
   @JsonKey()
   final bool isFavorite;
+  @override
+  final String? name;
+  @override
+  final String? stockExchange;
+  @override
+  final String? exchangeShortName;
+  @override
+  final String? currency;
 
   @override
   String toString() {
-    return 'Company(symbol: $symbol, name: $name, currency: $currency, stockExchange: $stockExchange, exchangeShortName: $exchangeShortName, isFavorite: $isFavorite)';
+    return 'Company(symbol: $symbol, isFavorite: $isFavorite, name: $name, stockExchange: $stockExchange, exchangeShortName: $exchangeShortName, currency: $currency)';
   }
 
   @override
@@ -198,21 +198,21 @@ class _$CompanyImpl extends _Company {
         (other.runtimeType == runtimeType &&
             other is _$CompanyImpl &&
             (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.isFavorite, isFavorite) ||
+                other.isFavorite == isFavorite) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.currency, currency) ||
-                other.currency == currency) &&
             (identical(other.stockExchange, stockExchange) ||
                 other.stockExchange == stockExchange) &&
             (identical(other.exchangeShortName, exchangeShortName) ||
                 other.exchangeShortName == exchangeShortName) &&
-            (identical(other.isFavorite, isFavorite) ||
-                other.isFavorite == isFavorite));
+            (identical(other.currency, currency) ||
+                other.currency == currency));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, symbol, name, currency,
-      stockExchange, exchangeShortName, isFavorite);
+  int get hashCode => Object.hash(runtimeType, symbol, isFavorite, name,
+      stockExchange, exchangeShortName, currency);
 
   @JsonKey(ignore: true)
   @override
@@ -231,11 +231,11 @@ class _$CompanyImpl extends _Company {
 abstract class _Company extends Company {
   const factory _Company(
       {required final String symbol,
-      required final String name,
-      required final String currency,
-      required final String stockExchange,
-      required final String exchangeShortName,
-      final bool isFavorite}) = _$CompanyImpl;
+      final bool isFavorite,
+      final String? name,
+      final String? stockExchange,
+      final String? exchangeShortName,
+      final String? currency}) = _$CompanyImpl;
   const _Company._() : super._();
 
   factory _Company.fromJson(Map<String, dynamic> json) = _$CompanyImpl.fromJson;
@@ -243,15 +243,15 @@ abstract class _Company extends Company {
   @override
   String get symbol;
   @override
-  String get name;
-  @override
-  String get currency;
-  @override
-  String get stockExchange;
-  @override
-  String get exchangeShortName;
-  @override
   bool get isFavorite;
+  @override
+  String? get name;
+  @override
+  String? get stockExchange;
+  @override
+  String? get exchangeShortName;
+  @override
+  String? get currency;
   @override
   @JsonKey(ignore: true)
   _$$CompanyImplCopyWith<_$CompanyImpl> get copyWith =>
